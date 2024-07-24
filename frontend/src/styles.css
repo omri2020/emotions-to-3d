@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "ArbelG";
+  src: url("./fonts/ArbelG-Bold.otf") format("opentype");
+  font-weight: 700; /* bolder typically maps to a numeric value of 700 or above */
+  font-style: normal; /* Bold is a weight, not a style */
+}
+
+@font-face {
+  font-family: "ArbelG";
+  src: url("./fonts/ArbelG-Medium.otf") format("opentype");
+  font-weight: 500; /* Medium typically maps to a numeric value of 500 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ArbelG";
+  src: url("./fonts/ArbelG-Regular.otf") format("opentype");
+  font-weight: 400; /* Normal typically maps to a numeric value of 400 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ArbelG";
+  src: url("./fonts/ArbelG-Stencil.otf") format("opentype");
+  font-weight: 300; /* Lighter typically maps to a numeric value of 300 */
+  font-style: normal; /* Stencil is often a style, but if it's just lighter, it should be normal */
+}

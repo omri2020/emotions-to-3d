@@ -1,0 +1,74 @@
+{"level":"info","message":"Received request","text":"היה לי היום יום נפלא","timestamp":"2024-07-24T12:26:53.037Z"}
+{"error":"translate.detect is not a function","level":"error","message":"Error translating text","timestamp":"2024-07-24T12:26:53.039Z"}
+{"level":"info","message":"Received request","text":"היה לי היום יום נפלא","timestamp":"2024-07-24T12:28:31.108Z"}
+{"error":"translate is not a function","level":"error","message":"Error translating text","timestamp":"2024-07-24T12:28:31.110Z"}
+{"level":"info","message":"Received request","text":"היה לי היום יום נפלא","timestamp":"2024-07-24T12:29:31.301Z"}
+{"error":"Cannot read properties of undefined (reading 'language')","level":"error","message":"Error translating text","timestamp":"2024-07-24T12:29:31.620Z"}
+{"level":"info","message":"Received request","text":"היה לי היום יום נפלא","timestamp":"2024-07-24T12:30:50.231Z"}
+{"level":"info","message":"Language detected","timestamp":"2024-07-24T12:30:50.485Z","translation":{"raw":{"confidence":1,"ld_result":{"extended_srclangs":["iw"],"srclangs":["iw"],"srclangs_confidences":[1]},"sentences":[{"backend":3,"model_specification":[{}],"orig":"היה לי היום יום נפלא","trans":"I had a wonderful day today","translation_engine_debug_info":[{"model_tracking":{"checkpoint_md5":"1eb561d2d816b8957a38cd5018eb164c","launch_doc":"tea_AllEn_2022q2.md"}}]}],"spell":{},"src":"iw"},"text":"I had a wonderful day today"}}
+{"error":"Cannot read properties of undefined (reading 'language')","level":"error","message":"Error translating text","timestamp":"2024-07-24T12:30:50.486Z"}
+{"level":"info","message":"Received request","text":"היה לי היום יום נפלא","timestamp":"2024-07-24T12:32:51.472Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T12:32:51.715Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T12:32:51.715Z","translatedText":"I had a wonderful day today"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T12:32:52.352Z","toxicity":0.026735162}
+{"level":"info","message":"Received request","text":"היה לי היום יום בן של זונה","timestamp":"2024-07-24T12:33:05.285Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T12:33:05.515Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T12:33:05.516Z","translatedText":"I had a son of a whore today"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T12:33:05.801Z","toxicity":0.85173553}
+{"level":"info","message":"Received request","text":"היה לי היום יום דבילי","timestamp":"2024-07-24T12:33:30.693Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T12:33:30.936Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T12:33:30.936Z","translatedText":"I had a bad day today"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T12:33:31.216Z","toxicity":0.1013248}
+{"level":"info","message":"Received request","text":"היה לי היום יום מטומטם","timestamp":"2024-07-24T12:33:43.732Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T12:33:43.955Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T12:33:43.955Z","translatedText":"I had a crazy day today"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T12:33:44.241Z","toxicity":0.16765249}
+{"level":"info","message":"Received request","text":"היה לי היום יום מזדיין","timestamp":"2024-07-24T12:33:49.396Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T12:33:49.610Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T12:33:49.611Z","translatedText":"I had a fucking day today"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T12:33:49.877Z","toxicity":0.6827122}
+{"level":"info","message":"Received request","text":"היה לי היום יום מזדיין בתחת","timestamp":"2024-07-24T12:33:56.188Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T12:33:56.418Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T12:33:56.418Z","translatedText":"I had an ass-fucking day today"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T12:33:56.705Z","toxicity":0.8540474}
+{"level":"info","message":"Received request","text":"היה לי היום יום מזדיין בתחת","timestamp":"2024-07-24T12:39:28.814Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T12:39:29.064Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T12:39:29.064Z","translatedText":"I had an ass-fucking day today"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T12:39:29.431Z","toxicity":0.8540474}
+{"level":"info","message":"Received request","text":"היה לי היום יום מצוין","timestamp":"2024-07-24T12:39:52.058Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T12:39:52.259Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T12:39:52.260Z","translatedText":"I had a great day today"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T12:39:52.560Z","toxicity":0.027913637}
+{"level":"info","message":"Received request","text":"היה לי היום יום בן של מזדיין  בתחת","timestamp":"2024-07-24T12:41:51.313Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T12:41:51.611Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T12:41:51.612Z","translatedText":"Today I had a son of a fucker in the ass"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T12:41:51.920Z","toxicity":0.9563754}
+{"level":"info","message":"Received request","text":"היה לי יום בן זונה","timestamp":"2024-07-24T12:44:12.186Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T12:44:12.403Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T12:44:12.403Z","translatedText":"I had a son of a bitch day"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T12:44:12.711Z","toxicity":0.85333383}
+{"level":"info","message":"Received request","text":"היה לי יום בן זונה","timestamp":"2024-07-24T12:45:04.553Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T12:45:04.741Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T12:45:04.742Z","translatedText":"I had a son of a bitch day"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T12:45:05.103Z","toxicity":0.85333383}
+{"level":"info","message":"Received request","text":"                ","timestamp":"2024-07-24T13:30:29.511Z"}
+{"language":"en","level":"info","message":"Language detected","timestamp":"2024-07-24T13:30:29.691Z"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T13:30:30.091Z","toxicity":0.021314176}
+{"level":"info","message":"Received request","text":"                  ","timestamp":"2024-07-24T13:30:45.142Z"}
+{"language":"en","level":"info","message":"Language detected","timestamp":"2024-07-24T13:30:45.318Z"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T13:30:45.624Z","toxicity":0.022021262}
+{"level":"info","message":"Received request","text":"היה לי יום מצוין\n","timestamp":"2024-07-24T13:30:52.950Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T13:30:53.154Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T13:30:53.154Z","translatedText":"I had a great day"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T13:30:53.433Z","toxicity":0.026617315}
+{"level":"info","message":"Received request","text":"היה לי היום יום מצוין","timestamp":"2024-07-24T13:43:01.441Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T13:43:01.702Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T13:43:01.703Z","translatedText":"I had a great day today"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T13:43:02.083Z","toxicity":0.027913637}
+{"level":"info","message":"Received request","text":"היה לי היום יום מצוין","timestamp":"2024-07-24T13:44:06.563Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-24T13:44:06.742Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-24T13:44:06.742Z","translatedText":"I had a great day today"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T13:44:07.024Z","toxicity":0.027913637}
+{"level":"info","message":"Received request","text":"I had a miserable day","timestamp":"2024-07-24T13:45:39.544Z"}
+{"language":"en","level":"info","message":"Language detected","timestamp":"2024-07-24T13:45:39.721Z"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T13:45:40.034Z","toxicity":0.25462922}

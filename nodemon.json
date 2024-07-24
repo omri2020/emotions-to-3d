@@ -1,0 +1,6 @@
+{
+  "ignore": [
+    "backend/objects/*",
+    "backend/file_records.json"
+  ]
+}

@@ -1,0 +1,92 @@
+@import url("./styles.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply font-arbel;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+/* Main homepage styles */
+.homepage {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Content styles */
+.content {
+  @apply relative z-10;
+}
+
+/* Sliding page styles */
+.sliding-page {
+  @apply absolute bottom-0 w-full h-[90%] bg-slate-600 z-50;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(80vh);
+}
+
+.sliding-page::before {
+  @apply bg-slate-600;
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  width: 100px;
+  height: 30px;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%, 0 100%);
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.sliding-page:hover {
+  transform: translateY(0); /* Move to the top on hover */
+  padding: 3rem;
+}
+
+.sliding-page:hover .description {
+  display: none;
+}
+
+.sliding-page:hover::before {
+  transform: translateX(-50%) translateY(25px) rotate(180deg); /* Point downwards on hover */
+  background-color: white;
+}
+
+/* Custom container styles */
+.note-container {
+  @apply w-full h-[300px] relative;
+  background-image: repeating-linear-gradient(
+    0deg,
+    black,
+    black 1px,
+    #f8f8f8 1px,
+    #f8f8f8 40px
+  ); /* Adjust the background size */
+  background-size: 100% 40px; /* Adjust the background size */
+}
+
+/* Custom textarea styles */
+.note-textarea {
+  @apply w-full h-full p-3 border-none resize-none outline-none;
+  background: transparent;
+  line-height: 39px !important; /* Match the line height with the background lines */
+  font-size: 16px; /* Adjust as necessary */
+  padding-top: 0.25em; /* Adjust this value to align the text correctly above the lines */
+}
+
+.card-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 80px;
+  height: 5px;
+  background-color: white;
+}
