@@ -136,8 +136,7 @@ async function retryRename(oldPath, newPath, retries = 5, delay = 1000) {
   }
 }
 
-// Middleware function for translation and toxicity check
-const checkToxicity = async (req, res, next) => {
+app.post("/check-toxicity", async (req, res) => {
   const { text } = req.body;
   logger.info("Received request", { text });
 
@@ -178,19 +177,21 @@ const checkToxicity = async (req, res, next) => {
       return res.status(400).json({ error: "Text is too toxic", toxicity });
     }
 
-    next();
+    return res.status(200).json({ message: "Text is valid" });
   } catch (error) {
     logger.error("Error analyzing text", { error: error.message });
     res
       .status(500)
       .json({ error: "Error analyzing text", details: error.message });
   }
-};
+});
 
 // Route to process text
-app.post("/process-text", checkToxicity, async (req, res) => {
+app.post("/process-text", async (req, res) => {
   try {
     const inputText = req.body.text;
+    const username = req.body.username;
+
     console.log("Received text:", inputText);
 
     const response = await axios.post("http://127.0.0.1:5000/process-text", {
@@ -244,7 +245,6 @@ app.post("/process-text", checkToxicity, async (req, res) => {
 
           // Extract object number to generate username
           const objectNumber = parseInt(newBaseName.split("-")[1]);
-          const username = `אנונימי #${objectNumber}`;
 
           // Add created at timestamp
           const createdAt = new Date().toISOString();

@@ -4,7 +4,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        abraham: ["AbrahamTrial", "sans-serif"],
         arbel: ["ArbelG", "sans-serif"],
+      },
+      colors: {
+        main: "#5F6C7C",
       },
       spacing: {
         "150px": "150px",

@@ -1,23 +1,38 @@
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, OrthographicCamera } from "@react-three/drei";
 import ObjModel from "./ObjModel";
 import ErrorBoundary from "../ErrorBoundary";
 import axios from "axios";
 import ProgressBar from "../components/ProgressBar";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Loader from "../Loader";
 import Modal from "../components/Modal";
 import { sendEmail } from "../services/sendEmail";
+import { emotionTranslations } from "../utils/emotionTranslations";
+import Button from "../components/Button";
+import debounce from "../utils/debounce";
+import LightButton from "../components/LightButton";
 
-function SetupCamera() {
-  const { camera } = useThree();
+const SetupCamera = () => {
+  const { set } = useThree();
+  const cameraRef = useRef();
+
   useEffect(() => {
-    camera.position.set(0, 20, 20);
-    camera.lookAt(0, 0, 0);
-  }, [camera]);
-  return null;
-}
+    set({ camera: cameraRef.current });
+  }, [set]);
+
+  return (
+    <OrthographicCamera
+      ref={cameraRef}
+      makeDefault
+      position={[0, 15, 20]}
+      zoom={45}
+      near={0.1}
+      far={100}
+    />
+  );
+};
 
 const ModelPage = () => {
   const { id } = useParams();
@@ -27,45 +42,55 @@ const ModelPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [isSent, setIsSent] = useState(false);
+  const [isSentModal, setIsSentModal] = useState(false);
+  const [error, setError] = useState(null);
+  const timeoutRef = useRef(null);
+
+  const navigate = useNavigate();
 
   const directionalLightRef = useRef();
 
-  const emotionTranslations = {
-    admiration: "הערצה",
-    amusement: "שעשוע",
-    anger: "כעס",
-    annoyance: "מטרד",
-    approval: "אישור",
-    caring: "דאגה",
-    confusion: "בלבול",
-    curiosity: "סקרנות",
-    desire: "תשוקה",
-    disappointment: "אכזבה",
-    disapproval: "אי הסכמה",
-    disgust: "גועל",
-    embarrassment: "מבוכה",
-    excitement: "התרגשות",
-    fear: "פחד",
-    gratitude: "הכרת תודה",
-    grief: "יגון",
-    joy: "שמחה",
-    love: "אהבה",
-    nervousness: "עצבנות",
-    optimism: "אופטימיות",
-    pride: "גאווה",
-    realization: "הבנה",
-    relief: "הקלה",
-    remorse: "חרטה",
-    sadness: "עצבות",
-    surprise: "הפתעה",
-    neutral: "ניטרלי",
-  };
+  const resetTimeout = useCallback(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
+      navigate("/");
+    }, 60000);
+  }, [navigate]);
+
+  useEffect(() => {
+    const handleUserInteraction = debounce(() => {
+      console.log("User interaction detected, resetting timeout");
+      resetTimeout();
+    }, 300);
+
+    // List of events to listen to
+    const events = ["mousemove", "keydown", "mousedown", "touchstart"];
+
+    // Add event listeners
+    events.forEach((event) => {
+      window.addEventListener(event, handleUserInteraction);
+    });
+
+    // Initialize the timeout
+    resetTimeout();
+
+    return () => {
+      // Cleanup event listeners and timeout on component unmount
+      events.forEach((event) => {
+        window.removeEventListener(event, handleUserInteraction);
+      });
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [resetTimeout]);
 
   useEffect(() => {
     const fetchRecord = async () => {
       try {
         const response = await axios.get(`http://localhost:3001/record/${id}`);
-        console.log("Record fetched:", response.data);
         setRecord(response.data);
       } catch (error) {
         console.error("Error fetching record:", error);
@@ -85,10 +110,31 @@ const ModelPage = () => {
   const time = createdAtDate.toLocaleTimeString("he-IL");
   const date = createdAtDate.toLocaleDateString("he-IL");
 
+  const isValidEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
   const handleSendEmail = () => {
-    const fileUrl = `http://localhost:3001${record.objPath}`;
-    sendEmail(email, record.username, fileUrl);
-    setIsSent(true);
+    if (isValidEmail(email)) {
+      const fileUrl = `http://localhost:3001${record.objPath}`;
+      sendEmail(email, record.username, fileUrl);
+      setIsSent(true);
+      setTimeout(() => {
+        navigate("/");
+      }, 5000);
+    } else {
+      setError("אולי טעות בהקלדה? נסלח ונשכח, נסו שוב");
+      setIsSent(false);
+    }
+  };
+
+  const handleExit = () => {
+    if (!isSent) {
+      setIsSentModal(true);
+      return;
+    }
+    navigate("/");
   };
 
   const changeLightDirection = () => {
@@ -118,97 +164,169 @@ const ModelPage = () => {
   const transformedFeelings = transformFeelings(record.feelings);
 
   return (
-    <div className="tracking-widest py-4 px-8 flex flex-col items-center gap-52">
-      <header className="flex w-full justify-between text-stone-500">
-        <Link to="/">{`< חזרה לדף הבית `}</Link>
-        <div>
-          <span>{`${record.username + " / " + date + " / " + time}`}</span>
+    <div className="tracking-widest py-4 px-8 flex items-center justify-center">
+      {objectLoading && (
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-[calc(50%+17.5vw)] -translate-y-1/2">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-4 border-dashed border-slate-500"></div>
         </div>
-      </header>
-      <div className="max-w-[1100px] min-h-[600px] h-full w-full flex justify-between text-slate-600">
-        <div className="max-w-[400px] w-full p-4 flex flex-col justify-between">
-          {record && (
-            <div>
-              <ul>
-                {Object.keys(transformedFeelings).map((emotion, index) => (
-                  <ProgressBar
-                    key={emotion}
-                    label={emotionTranslations[emotion]}
-                    value={transformedFeelings[emotion]}
-                    index={index}
-                  />
-                ))}
-              </ul>
-            </div>
-          )}
-          <div className="note-container !h-[200px]">
-            <textarea
-              className="note-textarea !text-2xl overflow-hidden"
-              value={record.text}
-              disabled
-            ></textarea>
-          </div>
-        </div>
-        <div className="max-w-[700px] w-full flex flex-col">
-          <div className="flex-1">
-            <ErrorBoundary>
-              <Canvas style={{ height: "100%", width: "100%" }}>
-                <SetupCamera />
-                <ambientLight intensity={3} />
-                <directionalLight
-                  ref={directionalLightRef}
-                  position={[-10, -10, -5]}
-                  intensity={10}
-                />
-                <pointLight />
-                <OrbitControls />
-                <Suspense fallback={null}>
-                  <ObjModel
-                    url={`http://localhost:3001${record.objPath}`}
-                    onLoaded={() => setObjectLoading(false)}
-                  />
-                </Suspense>
-              </Canvas>
-              {objectLoading && (
-                <div className="absolute inset-0 flex items-center justify-center bg-white">
-                  <Loader />
+      )}
+      <ErrorBoundary>
+        <Canvas
+          style={{
+            position: "fixed",
+            top: "0",
+            right: "0",
+            left: "0",
+            bottom: "0",
+            width: "100vw",
+            height: "100vh",
+            zIndex: "1",
+          }}
+        >
+          <SetupCamera />
+          <ambientLight intensity={3} />
+          <directionalLight
+            ref={directionalLightRef}
+            position={[-10, -10, -5]}
+            intensity={10}
+          />
+          <pointLight />
+          <OrbitControls />
+          <Suspense fallback={null}>
+            <ObjModel
+              url={`http://localhost:3001${record.objPath}`}
+              onLoaded={() => setObjectLoading(false)}
+            />
+          </Suspense>
+        </Canvas>
+      </ErrorBoundary>
+      <div className="max-w-[90%] h-full w-full ">
+        <header className="flex w-full justify-between  mb-80">
+          <Button
+            className="!border-b-slate-500 !border-b z-10 !bg-transparent !text-main hover:transform hover:scale-150 hover:border-none"
+            onClick={handleExit}
+            animation="pressed-right"
+          >
+            <i className="bx bx-chevron-right"></i>
+            <span className="transform translate-x-1 flex items-center text-2xl">
+              חזרה לדף הבית
+            </span>
+          </Button>
+          {isSentModal && (
+            <Modal isOpen={isSentModal} onClose={() => setIsSentModal(false)}>
+              <div className="flex flex-col items-center justify-center gap-10">
+                <div className="flex flex-col items-center justify-center text-2xl">
+                  <span>כבר עוזבים?</span>
+                  <span>שמרו אצלכם את התוצר לפני האתחול</span>
                 </div>
-              )}
-            </ErrorBoundary>
+                <div className="flex flex-col items-center jusstify-center gap-3">
+                  <Button
+                    className="w-full"
+                    animation="pressed-left-sm"
+                    onClick={() => {
+                      setIsSentModal(false);
+                      setIsModalOpen(true);
+                    }}
+                  >
+                    <span>שליחה למייל שלי</span>
+                    <i className="bx bx-chevron-left"></i>
+                    <i className="bx bx-chevron-left"></i>
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      navigate("/");
+                    }}
+                    className="w-full !bg-transparent border border-main !text-main"
+                    animation="pressed-right-lg"
+                  >
+                    <i className="bx bx-chevron-right"></i>
+                    <i className="bx bx-chevron-right"></i>
+                    <span>אתחול בלי שמירה</span>
+                  </Button>
+                </div>
+              </div>
+            </Modal>
+          )}
+          <div>
+            <span className="text-2xl">{`${
+              record.username + " / " + time + " / " + date
+            }`}</span>
           </div>
-          <button className="underline" onClick={changeLightDirection}>
-            Change Light Direction
-          </button>
-          <button
-            className="underline text-3xl"
-            onClick={() => setIsModalOpen(true)}
-          >{`> שליחת את התוצר אליי <`}</button>
+        </header>
+        <div className="w-full flex items-center justify-between relative">
+          <LightButton onClick={changeLightDirection} />
+          <div className="max-w-[35%] z-10 w-full p-4 flex flex-col gap-10 justify-between">
+            {record && (
+              <div>
+                <ul>
+                  {Object.keys(transformedFeelings).map((emotion, index) => (
+                    <ProgressBar
+                      key={emotion}
+                      label={emotionTranslations[emotion]}
+                      value={transformedFeelings[emotion]}
+                      index={index}
+                    />
+                  ))}
+                </ul>
+              </div>
+            )}
+            <div className="note-container h-60">
+              <textarea
+                className="note-textarea !text-2xl"
+                value={record.text}
+                disabled
+              ></textarea>
+            </div>
+          </div>
+          <div className="h-full max-w-[60%] w-full flex flex-col self-end">
+            <Button
+              onClick={() => setIsModalOpen(true)}
+              icons={true}
+              className="flex items-center justify-center relative !px-8"
+              animation="pressed-shrink"
+            >
+              <i className="bx bx-chevron-left absolute right-1"></i>
+              <span>לשמירה ושליחה</span>
+              <i className="bx bx-chevron-right absolute left-1"></i>
+            </Button>
+          </div>
         </div>
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setEmail("");
+          setError("");
+        }}
+      >
         {isSent ? (
-          <div className="p-10 flex flex-col gap-20 text-slate-600">
+          <div className="flex flex-col gap-20 text-2xl text-center">
             <div>
               <p>
                 וזהו! <br /> כמה דקות והתוצר אצלך
               </p>
               <p className="mt-4">תודה על השיתוף</p>
             </div>
-            <Link to="/" className="mt-4 underline">{`חזרה לדף הבית >`}</Link>
           </div>
         ) : (
-          <div className="p-10 flex flex-col gap-20 text-slate-600">
-            <p>הכנס/י את המייל שלך לקבלת קובץ</p>
-            <input
-              className="bg-stone-200 border-b border-black placeholder:text-stone-400"
-              placeholder="המייל שלי"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-
-            <button className="mt-4 underline" onClick={handleSendEmail}>
-              {`לשליחה >>`}
-            </button>
+          <div className="flex flex-col justify-center items-start gap-20 text-2xl">
+            <p>הכנס/י את המייל שלך לקבלת הקובץ</p>
+            <div className="w-full">
+              <input
+                className="text-inherit bg-stone-200 border-b border-slate-600 w-full placeholder:text-stone-400 outline-main pr-2 py-1"
+                type="email"
+                placeholder="המייל שלי"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              {error && <p className="text-[18px] ">{error}</p>}
+            </div>
+            <Button onClick={handleSendEmail} animation="pressed-left">
+              <span>שליחה</span>
+              <i className="bx bx-chevron-left"></i>
+              <i className="bx bx-chevron-left -mr-2"></i>
+            </Button>
           </div>
         )}
       </Modal>

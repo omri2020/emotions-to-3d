@@ -72,3 +72,115 @@
 {"level":"info","message":"Received request","text":"I had a miserable day","timestamp":"2024-07-24T13:45:39.544Z"}
 {"language":"en","level":"info","message":"Language detected","timestamp":"2024-07-24T13:45:39.721Z"}
 {"level":"info","message":"Toxicity score received","timestamp":"2024-07-24T13:45:40.034Z","toxicity":0.25462922}
+{"level":"info","message":"Received request","text":"אני מרגיש מצוין לאחרונה יש דברים חדשים בחיים שלי ואני נורא נרגש מהם","timestamp":"2024-07-25T08:38:57.537Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-25T08:38:57.792Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-25T08:38:57.792Z","translatedText":"I feel great lately, there are new things in my life and I am very excited about them"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-25T08:38:58.146Z","toxicity":0.036870047}
+{"level":"info","message":"Received request","text":"היה לי יום מאוד מעניין אך בסך הכל אני מרגיש מרוצה ומסופק","timestamp":"2024-07-25T08:57:05.032Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-25T08:57:05.275Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-25T08:57:05.275Z","translatedText":"I had a very interesting day but overall I feel satisfied and fulfilled"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-25T08:57:05.649Z","toxicity":0.032391842}
+{"level":"info","message":"Received request","text":"מנסה להבין למה השרת לא עובד כמו שצריך","timestamp":"2024-07-25T09:00:15.466Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-25T09:00:15.695Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-25T09:00:15.695Z","translatedText":"Trying to figure out why the server isn't working properly"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-25T09:00:15.993Z","toxicity":0.02035702}
+{"level":"info","message":"Received request","text":"האמת שהיום אני מרגיש בטוב עבדתי והתפרנסתי כהוגן ובנוסף התחדשתי במגוון מוצרים טכנולוגיים","timestamp":"2024-07-25T19:35:06.396Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-25T19:35:06.681Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-25T19:35:06.681Z","translatedText":"The truth is that today I feel good, I worked and made a fair living and in addition I renewed myself with a variety of technological products"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-25T19:35:07.026Z","toxicity":0.014450971}
+{"level":"info","message":"Received request","text":"דגכדגכדגכדשגכלחדמחלגכמלחדגמכלחמדלכמדלגמכלחךףדגמכףחלמדשגכמדחלשגכףלמלדחגמכףלחדשמגףלכמלדףחשמגכףלחדגשמכלףחמדףלחגכמלףדחשגמכףלחדמשףכלחמשדףלכממחףמדשכחלגמ סוף","timestamp":"2024-07-28T17:18:37.424Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-28T17:18:37.766Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-28T17:18:37.766Z","translatedText":"Fish"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-28T17:18:38.450Z","toxicity":0.033334624}
+{"level":"info","message":"Received request","text":"דגכדגכדגכדשגכלחדמחלגכמלחדגמכלחמדלכמדלגמכלחךףדגמכףחלמדשגכמדחלשגכףלמלדחגמכףלחדשמגףלכמלדףחשמגכףלחדגשמכלףחמדףלחגכמלףדחשגמכףלחדמשףכלחמשדףלכממחףמדשכחלגמ סוף","timestamp":"2024-07-28T17:19:59.798Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-28T17:19:59.960Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-28T17:19:59.961Z","translatedText":"Fish"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-28T17:20:00.226Z","toxicity":0.033334624}
+{"level":"info","message":"Received request","text":"אני מרגיש יחסית בסדר היה לי יום לא משהו אבל אני מנסה להישאר כמה שיותר אופטימי ","timestamp":"2024-07-28T17:23:57.770Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-28T17:23:58.021Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-28T17:23:58.021Z","translatedText":"I feel relatively fine, I had a bad day but I try to stay as optimistic as possible"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-28T17:23:58.362Z","toxicity":0.028149333}
+{"level":"info","message":"Received request","text":"אני מרגיש נפלא לאחרונה הולך לי מאוד בעבודה ובלימודים","timestamp":"2024-07-28T17:55:57.981Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-28T17:55:58.219Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-28T17:55:58.219Z","translatedText":"I feel wonderful lately, I'm doing very well at work and studies"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-28T17:55:58.889Z","toxicity":0.019226074}
+{"level":"info","message":"Received request","text":"שכגגדכדגכדגכגדכג","timestamp":"2024-07-28T17:56:45.621Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-28T17:56:46.167Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-28T17:56:46.168Z","translatedText":"Shhhgggggggggggggggggggggggggggggggggggggggggg"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-28T17:56:46.444Z","toxicity":0.2043827}
+{"level":"info","message":"Received request","text":"נכנס למסיבה ואז יוצא על אי שפיות","timestamp":"2024-07-28T18:24:46.842Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-28T18:24:47.110Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-28T18:24:47.111Z","translatedText":"Enters a party and then leaves on insanity"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-28T18:24:47.465Z","toxicity":0.2312681}
+{"level":"info","message":"Received request","text":"היה לי יום עצוב בטירוף אני לא יודע איך ממשיכים","timestamp":"2024-07-28T18:25:49.759Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-28T18:25:49.954Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-28T18:25:49.955Z","translatedText":"I had a crazy sad day, I don't know how to continue"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-28T18:25:50.227Z","toxicity":0.10826672}
+{"level":"info","message":"Received request","text":"חוזר מהבית ספר לבית משחק בדיאבלו יושבים בשכונה מעשנים פה סיגריות","timestamp":"2024-07-28T18:26:27.367Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-28T18:26:27.607Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-28T18:26:27.608Z","translatedText":"Coming back from school to play house in Diablo sitting in the neighborhood smoking cigarettes here"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-28T18:26:27.873Z","toxicity":0.2854971}
+{"level":"info","message":"Received request","text":"אני מאושר מעולם לא הייתי כה שמח","timestamp":"2024-07-28T18:27:00.934Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-28T18:27:01.157Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-28T18:27:01.158Z","translatedText":"I'm happy, I've never been so happy"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-28T18:27:01.450Z","toxicity":0.0466155}
+{"level":"info","message":"Received request","text":"החלטתי שאני מתפטר מהעבודה כי החיים קצרים וצריך לנסות להנות מהם כמה שיותר ","timestamp":"2024-07-28T18:27:49.910Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-28T18:27:50.115Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-28T18:27:50.116Z","translatedText":"I decided to quit my job because life is short and you should try to enjoy it as much as possible"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-28T18:27:50.418Z","toxicity":0.09958932}
+{"level":"info","message":"Received request","text":"בן זונה","timestamp":"2024-07-29T06:27:23.743Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-29T06:27:23.945Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-29T06:27:23.946Z","translatedText":"son of a bitch"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-29T06:27:24.612Z","toxicity":0.95048624}
+{"level":"info","message":"Received request","text":"בן זונה","timestamp":"2024-07-29T19:08:25.957Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-29T19:08:26.125Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-29T19:08:26.125Z","translatedText":"son of a bitch"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-29T19:08:26.799Z","toxicity":0.95048624}
+{"level":"info","message":"Received request","text":"בן זונה","timestamp":"2024-07-29T19:34:31.205Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-29T19:34:31.400Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-29T19:34:31.400Z","translatedText":"son of a bitch"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-29T19:34:31.788Z","toxicity":0.95048624}
+{"level":"info","message":"Received request","text":"בן נחמד","timestamp":"2024-07-29T19:34:38.078Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-29T19:34:38.293Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-29T19:34:38.294Z","translatedText":"nice son"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-29T19:34:38.575Z","toxicity":0.026970858}
+{"level":"info","message":"Received request","text":"בן נחמד","timestamp":"2024-07-29T19:35:24.702Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-29T19:35:24.893Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-29T19:35:24.893Z","translatedText":"nice son"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-29T19:35:25.193Z","toxicity":0.026970858}
+{"level":"info","message":"Received request","text":"בן זונה","timestamp":"2024-07-29T19:39:18.492Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-29T19:39:18.682Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-29T19:39:18.683Z","translatedText":"son of a bitch"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-29T19:39:18.977Z","toxicity":0.95048624}
+{"level":"info","message":"Received request","text":"בן זונה","timestamp":"2024-07-29T19:44:54.867Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-29T19:44:55.031Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-29T19:44:55.031Z","translatedText":"son of a bitch"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-29T19:44:55.375Z","toxicity":0.95048624}
+{"level":"info","message":"Received request","text":"היה לי יום נפלא","timestamp":"2024-07-29T19:45:01.817Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-29T19:45:01.971Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-29T19:45:01.971Z","translatedText":"I had a wonderful day"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-29T19:45:02.227Z","toxicity":0.02638162}
+{"level":"info","message":"Received request","text":"אני עצבני ומאוד רוצה לקלל","timestamp":"2024-07-29T19:45:47.293Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-29T19:45:47.477Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-29T19:45:47.478Z","translatedText":"I'm nervous and really want to curse"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-29T19:45:47.789Z","toxicity":0.4977744}
+{"level":"info","message":"Received request","text":"אני עצבני ובא לי לקלל","timestamp":"2024-07-29T19:46:19.555Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-29T19:46:19.790Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-29T19:46:19.790Z","translatedText":"I'm nervous and I feel like cursing"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-29T19:46:20.071Z","toxicity":0.3972142}
+{"level":"info","message":"Received request","text":"בן זונה","timestamp":"2024-07-29T20:01:19.406Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-29T20:01:19.578Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-29T20:01:19.579Z","translatedText":"son of a bitch"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-29T20:01:19.919Z","toxicity":0.95048624}
+{"level":"info","message":"Received request","text":"דגכעחעחלףדגמעכחגלמעחלגמכדהוןמרקאןפוהמןוקפרמדןומוגןדכיעגדכפןחליעחגלףכדיעחגכדיעפןמכגדןוהמכפןהמגרןהמדגכחלעיףלחכגעימףחלגכמעחףלגכמדףלחהמגכלףחמהלחףדגכחעיכגעיפןואריעוןרקפעיפוןקארמהפוןמ'קרמהפןקמרןפוהמןוקפרמהוןפמק'וןמןהואמפןו'אמהןפו'מקאהןפוק'מאעפןומ'קפןוה'פןקואמהפןקו'מהפןו'קמאפהןומ'קאפוןהמ'פקוןאה'מקןואהמפ'וקןאמפהןו'קןאוהמפקןואהמפ'וןקאמהפןו'קמאפון'מקהאפןומ'פןואקמה'ןקפומהןופק'אפןוהמק'פןואהמ'פקןואהמפ'ןוקאהמןו","timestamp":"2024-07-30T08:31:22.697Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-30T08:31:23.020Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-30T08:31:23.021Z","translatedText":"Fish 'Wenmanhuampno'amhanpo'mkahanfuk'maafenno'kapanu'pankuamapanko'mahpanu'kamaphanu'kaponhem'pakona'maknoahamp'ukanamphanu'kenauhampkanuahamp'unkamahpanu'kamaphon'makhapanum'panuakma'nakpomahanupkapanohmak'penuam'paknuahamp'nocahamno"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-30T08:31:23.712Z","toxicity":0.028385026}
+{"level":"info","message":"Received request","text":"דגכעחעחלףדגמעכחגלמעחלגמכדהוןמרקאןפוהמןוקפרמדןומוגןדכיעגדכפןחליעחגלףכדיעחגכדיעפןמכגדןוהמכפןהמגרןהמדגכחלעיףלחכגעימףחלגכמעחףלגכמדףלחהמגכלףחמהלחףדגכחעיכגעיפןואריעוןרקפעיפוןקארמהפוןמ'קרמהפןקמרןפוהמןוקפרמהוןפמק'וןמןהואמפןו'אמהןפו'מקאהןפוק'מאעפןומ'קפןוה'פןקואמהפןקו'מהפןו'קמאפהןומ'קאפוןהמ'פקוןאה'מקןואהמפ'וקןאמפהןו'קןאוהמפקןואהמפ'וןקאמהפןו'קמאפון'מקהאפןומ'פןואקמה'ןקפומהןופק'אפןוהמק'פןואהמ'פקןואהמפ'ןוקאהמןו","timestamp":"2024-07-30T08:31:31.846Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-30T08:31:32.006Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-30T08:31:32.007Z","translatedText":"Fish 'Wenmanhuampno'amhanpo'mkahanfuk'maafenno'kapanu'pankuamapanko'mahpanu'kamaphanu'kaponhem'pakona'maknoahamp'ukanamphanu'kenauhampkanuahamp'unkamahpanu'kamaphon'makhapanum'panuakma'nakpomahanupkapanohmak'penuam'paknuahamp'nocahamno"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-30T08:31:32.312Z","toxicity":0.028385026}
+{"level":"info","message":"Received request","text":"היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר היום אני שמח ומאושר ","timestamp":"2024-07-30T08:31:56.751Z"}
+{"language":"iw","level":"info","message":"Language detected","timestamp":"2024-07-30T08:31:57.020Z"}
+{"level":"info","message":"Text translated","timestamp":"2024-07-30T08:31:57.021Z","translatedText":"Today I'm happy and happy Today I'm happy and happy Today I'm happy and happy Today I'm happy and happy Today I'm happy and happy Today I'm happy and happy Today I'm happy and happy Today I'm happy and happy Today I'm happy and happy Today I'm happy and happy Today I'm happy and happy Today I'm happy and happy Today I happy and happy today i am happy and happy today i am happy and happy today i am happy and happy today i am happy and happy today i am happy and happy today i am happy and happy today i am happy and happy"}
+{"level":"info","message":"Toxicity score received","timestamp":"2024-07-30T08:31:57.297Z","toxicity":0.07845957}
